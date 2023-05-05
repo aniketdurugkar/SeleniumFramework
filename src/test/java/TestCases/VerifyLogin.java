@@ -20,7 +20,7 @@ public class VerifyLogin extends baseclass{
 	     
 	  
 	  String actualText=LPO.errorText().getText();
-	  String expectedText="Please check your username. If you still can't log in, contact your Salesforce administrator.";
+	  String expectedText="Please check your username and password. If you still can't log in, contact your Salesforce administrator.";
 	  SoftAssert assertion=new SoftAssert();
 	  assertion.assertEquals(actualText, expectedText, "Error message is not valid");
 	  assertion.assertAll();
