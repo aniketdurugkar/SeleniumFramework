@@ -6,24 +6,47 @@ import org.openqa.selenium.WebElement;
 
 public class LoginPageObjects {
 	
-	public WebDriver driver;
-	
-	By username=By.xpath("//input[@id='username']");
-	
-	By password=By.xpath("//input[@id='password']");
-	
-	By login=By.xpath("//input[@id='Login']");
-	
-	public WebElement enterusername() {
-			return driver.findElement(username);
-	}
-	
-	public WebElement enteruserpassword() {
-		return driver.findElement(password);
-	}
-	
-	public WebElement clickLogin() {
-		return driver.findElement(login);
-	}
+	public WebDriver driver; //This driver is null-- dont have scope- value is null
+	 
+	 private By username=By.xpath("//input[@id='username']");
+	 
+	 private By password=By.xpath("//input[@id='password']");
+	 
+	 private By login=By.xpath("//input[@id='Login']");
+	 
+	 private By tryForFree=By.xpath("//a[@id='signup_link']");
+	 
+	 private By errorText=By.xpath("//div[@id='error']");
+
+	 public LoginPageObjects(WebDriver driver2) {
+	  
+	  this.driver=driver2; 
+	 }
+
+	 public WebElement enterUsername() {
+	  return driver.findElement(username);
+	     
+	 }
+	 
+	 public WebElement enterPassword() {
+	  return driver.findElement(password);
+	     
+	 }
+	 
+	 public WebElement clickLogin() {
+	  return driver.findElement(login);
+	     
+	 }
+	 
+	 public WebElement ClickOnTryForFree() {
+	  return driver.findElement( tryForFree);
+	  
+	 }
+	 
+	 public WebElement errorText() {
+		  return driver.findElement(errorText);
+		  
+		 }
+
 
 }

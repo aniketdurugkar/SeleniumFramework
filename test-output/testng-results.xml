@@ -1,21 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-01T12:46:05 IST" name="Default suite" finished-at="2023-05-01T12:46:10 IST" duration-ms="4661">
+  <suite started-at="2023-05-03T14:10:01 IST" name="Suite" finished-at="2023-05-03T14:10:19 IST" duration-ms="17906">
     <groups>
     </groups>
-    <test started-at="2023-05-01T12:46:05 IST" name="Default test" finished-at="2023-05-01T12:46:10 IST" duration-ms="4661">
+    <test started-at="2023-05-03T14:10:01 IST" name="Test" finished-at="2023-05-03T14:10:19 IST" duration-ms="17906">
+      <class name="TestCases.VerifySignup">
+        <test-method is-config="true" signature="launchBrowzer()[pri:0, instance:TestCases.VerifySignup@3bb9a3ff]" started-at="2023-05-03T14:10:07 IST" name="launchBrowzer" finished-at="2023-05-03T14:10:10 IST" duration-ms="3205" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowzer -->
+        <test-method signature="signup()[pri:0, instance:TestCases.VerifySignup@3bb9a3ff]" started-at="2023-05-03T14:10:10 IST" name="signup" finished-at="2023-05-03T14:10:19 IST" duration-ms="8516" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signup -->
+        <test-method is-config="true" signature="QuitBrowzer()[pri:0, instance:TestCases.VerifySignup@3bb9a3ff]" started-at="2023-05-03T14:10:19 IST" name="QuitBrowzer" finished-at="2023-05-03T14:10:19 IST" duration-ms="264" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- QuitBrowzer -->
+      </class> <!-- TestCases.VerifySignup -->
       <class name="TestCases.VerifyLogin">
-        <test-method signature="login()[pri:0, instance:TestCases.VerifyLogin@3daa422a]" started-at="2023-05-01T12:46:06 IST" name="login" finished-at="2023-05-01T12:46:10 IST" duration-ms="4614" status="FAIL">
-          <exception class="java.lang.NullPointerException">
+        <test-method is-config="true" signature="launchBrowzer()[pri:0, instance:TestCases.VerifyLogin@7722c3c3]" started-at="2023-05-03T14:10:01 IST" name="launchBrowzer" finished-at="2023-05-03T14:10:06 IST" duration-ms="4883" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowzer -->
+        <test-method signature="InvalidLogin()[pri:0, instance:TestCases.VerifyLogin@7722c3c3]" started-at="2023-05-03T14:10:06 IST" name="InvalidLogin" finished-at="2023-05-03T14:10:07 IST" duration-ms="734" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null]]>
+              <![CDATA[The following asserts failed:
+Error message is not valid expected [Please check your username. If you still can't log in, contact your Salesforce administrator.] but found [Please check your username and password. If you still can't log in, contact your Salesforce administrator.]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
-at pageObjectModel.LoginPageObjects.enterusername(LoginPageObjects.java:18)
-at TestCases.VerifyLogin.login(VerifyLogin.java:19)
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+Error message is not valid expected [Please check your username. If you still can't log in, contact your Salesforce administrator.] but found [Please check your username and password. If you still can't log in, contact your Salesforce administrator.]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+at TestCases.VerifyLogin.InvalidLogin(VerifyLogin.java:26)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -46,11 +67,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
+        </test-method> <!-- InvalidLogin -->
+        <test-method is-config="true" signature="QuitBrowzer()[pri:0, instance:TestCases.VerifyLogin@7722c3c3]" started-at="2023-05-03T14:10:07 IST" name="QuitBrowzer" finished-at="2023-05-03T14:10:07 IST" duration-ms="257" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- QuitBrowzer -->
       </class> <!-- TestCases.VerifyLogin -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
